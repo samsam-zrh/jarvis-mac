@@ -1,0 +1,1 @@
+"""Assistant local pour macOS."""

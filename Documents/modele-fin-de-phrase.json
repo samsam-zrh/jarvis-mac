@@ -1,0 +1,8 @@
+{
+  "repository": "pipecat-ai/smart-turn-v3",
+  "revision": "f766f81d3cfdf7737ac64aad813d91bbfd56bf93",
+  "file": "smart-turn-v3.2-cpu.onnx",
+  "bytes": 8679182,
+  "sha256": "2bb026316b14a660486a75b1733cd3fbab8c2fd0314dc9af7be49f8cca967e4f",
+  "license": "BSD-2-Clause"
+}

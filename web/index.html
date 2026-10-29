@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jarvis</title><link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-symbol">j.</span><span>Jarvis</span></div>
+    <button id="new-chat" class="new-chat"><span>＋</span> Nouveau chat</button>
+    <div class="sidebar-label">Conversation</div>
+    <div class="current-chat"><span class="dot"></span> Maintenant</div>
+    <div class="sidebar-bottom">
+      <div class="local-note"><span class="local-icon">◈</span><div>Sur votre Mac<small>Vos échanges restent ici</small></div></div>
+      <button id="settings-button" class="settings-button">Réglages <span>⌘ ,</span></button>
+      <div class="user"><span class="avatar">S</span><span>Samuel<small>Apple M5 · 24 Go</small></span><span class="online-dot"></span></div>
+    </div>
+  </aside>
+  <main>
+    <header><span>Assistant personnel</span><div class="header-right"><span id="status-pill" class="status-pill"><i></i> Connexion…</span><button id="profile-button" class="profile-button">Rapide <span>⌄</span></button></div></header>
+    <div id="connection-error" class="notice" hidden></div>
+    <section id="welcome" class="welcome">
+      <div class="orb-wrap"><div id="orb" class="orb"><div class="orb-inner"></div><span></span><span></span><span></span><span></span><span></span></div></div>
+      <h1>Qu’est-ce qu’on fait, Samuel ?</h1>
+      <p>Parlez, écrivez. Je m’occupe de la suite.</p>
+      <div class="suggestions">
+        <button data-prompt="Cherche sur Internet trois conseils utiles pour économiser la batterie d’un Mac. Crée un document DOCX avec les sources dans ~/Documents/Jarvis, puis ouvre-le dans Pages."><span class="suggestion-icon">▤</span><strong>Faire une recherche</strong><small>Et en créer un document</small></button>
+        <button data-prompt="Retrouve les fichiers PDF de mon dossier Documents et montre-moi les cinq premiers résultats."><span class="suggestion-icon">⌕</span><strong>Retrouver un fichier</strong><small>Dans mes documents</small></button>
+        <button data-prompt="Ouvre l’application Calendrier."><span class="suggestion-icon">▦</span><strong>Ouvrir une application</strong><small>Et passer à l’action</small></button>
+      </div>
+    </section>
+    <div id="conversation" class="conversation" aria-live="polite"></div>
+    <div id="activity" class="activity" hidden><button id="activity-toggle"><span class="activity-dot"></span><span id="activity-label">En cours…</span><span class="chevron">⌄</span></button><div id="activity-list" hidden></div></div>
+    <div class="composer-area">
+      <div id="recording-label" class="recording-label" hidden>Je vous écoute… Cliquez à nouveau pour envoyer.</div>
+      <form id="composer" class="composer"><textarea id="prompt" rows="1" placeholder="Demandez quelque chose à Jarvis…" aria-label="Votre demande"></textarea><div class="composer-bottom"><span class="composer-hint">⌘ ⇧ Espace pour parler</span><div><button type="button" id="mic" class="icon-button" aria-label="Parler à Jarvis" title="Parler · ⌘ ⇧ Espace"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 18v3M8 21h8"/></svg></button><button id="stop" type="button" class="send-button stop-button" aria-label="Arrêter" hidden>■</button><button id="send" type="submit" class="send-button" aria-label="Envoyer">↑</button></div></div></form>
+      <p class="footer-note" id="model-note">Modèle local · Chargement de l’état…</p>
+    </div>
+  </main>
+  <dialog id="settings-dialog"><form method="dialog"><div class="dialog-heading"><h2>Votre assistant</h2><button class="close-button" aria-label="Fermer">×</button></div></form><p class="dialog-intro">Un assistant qui travaille sur votre Mac.</p>
+    <label class="setting-row"><span>Modèle<small>Rapide au quotidien, précis pour approfondir.</small></span><select id="profile-select"><option value="fast">Rapide</option><option value="precise">Précis</option></select></label>
+    <label class="setting-row"><span>Réponses vocales<small>Une voix française, générée sur le Mac.</small></span><input id="speak-toggle" type="checkbox"></label>
+    <label class="setting-row"><span>Contrôle des applications<small>Permettre à Jarvis d’agir dans les interfaces.</small></span><input id="desktop-toggle" type="checkbox"></label>
+    <div class="permissions"><strong id="permissions-title">Accès aux applications</strong><p id="permissions-description">Autorisez CuaDriver dans Accessibilité et Enregistrement de l’écran, puis vérifiez l’accès.</p><div><button id="grant-permissions" class="secondary-button">Ouvrir les autorisations</button><button id="check-permissions" class="secondary-button">Vérifier l’accès</button></div></div>
+    <div class="settings-foot">Les recherches web utilisent Internet.<br>Le modèle, la voix et l’historique fonctionnent localement.</div>
+  </dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body></html>

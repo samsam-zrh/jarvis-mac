@@ -1,0 +1,18 @@
+[project]
+name = "jarvis-mac-local"
+version = "0.1.0"
+description = "Assistant personnel local pour macOS, basé sur Goose et Cua Driver"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi==0.162.0", "uvicorn==0.54.0", "mcp==1.30.0",
+  "httpx==0.28.1", "python-docx==1.2.0", "pypdf==6.21.4",
+  "beautifulsoup4==4.15.0", "ddgs==9.16.1", "mlx-whisper==0.4.3",
+  "playwright==1.64.1",
+  "mlx-audio==0.6.3", "misaki==0.9.4", "espeakng-loader==0.2.4", "phonemizer-fork==3.3.2",
+  "onnxruntime==1.24.4", "python-pptx==1.0.2",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]

@@ -1,0 +1,71 @@
+{
+  "repo": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit",
+  "revision": "5c390979e4b93af5f2932f90742ca99c7dd04687",
+  "files": [
+    {
+      "path": "speech_tokenizer/configuration.json",
+      "bytes": 76,
+      "sha256": null
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 127,
+      "sha256": null
+    },
+    {
+      "path": "speech_tokenizer/preprocessor_config.json",
+      "bytes": 234,
+      "sha256": null
+    },
+    {
+      "path": "generation_config.json",
+      "bytes": 245,
+      "sha256": null
+    },
+    {
+      "path": "README.md",
+      "bytes": 1068,
+      "sha256": null
+    },
+    {
+      "path": "speech_tokenizer/config.json",
+      "bytes": 2336,
+      "sha256": null
+    },
+    {
+      "path": "config.json",
+      "bytes": 5437,
+      "sha256": null
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes": 7344,
+      "sha256": null
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "bytes": 71786,
+      "sha256": null
+    },
+    {
+      "path": "merges.txt",
+      "bytes": 1671839,
+      "sha256": null
+    },
+    {
+      "path": "vocab.json",
+      "bytes": 2776833,
+      "sha256": null
+    },
+    {
+      "path": "speech_tokenizer/model.safetensors",
+      "bytes": 682293092,
+      "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258"
+    },
+    {
+      "path": "model.safetensors",
+      "bytes": 1625226859,
+      "sha256": "d8627de7ef411f6775182925059e140a9e1edb1fde8feeb540b4fba0edee1e58"
+    }
+  ]
+}
